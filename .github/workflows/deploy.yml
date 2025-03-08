@@ -1,48 +1,27 @@
-name: CI/CD - Deploy a EC2
-
+name:  CI/CD
 on:
   push:
     branches:
-      - main  # Se ejecuta solo cuando hay cambios en la rama "main"
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 🔹 Clonar repositorio
-      uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-    - name: 🔹 Configurar Docker y login en Docker Hub
-      run: |
-        echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+      - name: Simple Build Step
+        run: echo "Build successful"
 
-    - name: 🔹 Construir imágenes Docker
-      run: |
-        docker build -t alexismendozaa/evaluaruc-backend:latest -f backend/Dockerfile .
-        docker build -t alexismendozaa/evaluaruc-frontend:latest -f frontend/Dockerfile .
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
 
-    - name: 🔹 Subir imágenes a Docker Hub
-      run: |
-        docker push alexismendozaa/evaluaruc-backend:latest
-        docker push alexismendozaa/evaluaruc-frontend:latest
-
-    - name: 🔹 Configurar conexión SSH y desplegar en EC2
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.EC2_HOST }}
-        username: ${{ secrets.EC2_USER }}
-        key: ${{ secrets.EC2_SSH_KEY }}
-        script: |
-          # Moverse al directorio del proyecto
-          cd /home/ubuntu/evaluaruc
-
-          # Descargar las nuevas imágenes de Docker Hub
-          docker pull alexismendozaa/evaluaruc-backend:latest
-          docker pull alexismendozaa/evaluaruc-frontend:latest
-
-          # Borrar contenedores antiguos si existen
-          docker-compose down
-
-          # Levantar los nuevos contenedores
-          docker-compose up -d
+    steps:
+      - name: Fake Deployment Step
+        run: echo "Deployment successful"
