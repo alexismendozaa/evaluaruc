@@ -1,0 +1,46 @@
+/* Estilos generales de la tabla */
+table {
+  width: 100%; /* Ancho completo de la tabla */
+  border-collapse: collapse; /* Hace que las celdas se junten sin espacio entre ellas */
+  margin-top: 20px; /* Añade un poco de espacio arriba de la tabla */
+  font-family: Arial, sans-serif; /* Fuente más legible */
+}
+
+th, td {
+  padding: 15px 45px; /* Espaciado dentro de las celdas */
+  text-align: left; /* Alinea el texto a la izquierda */
+  border: 1px solid #ddd; /* Bordes suaves y delgados */
+}
+
+th {
+  background-color: #29517f; /* Color de fondo para el encabezado */
+  color: white; /* Color del texto en el encabezado */
+  text-transform: uppercase; /* Hace que las letras sean mayúsculas */
+}
+
+td {
+  background-color: #f9f9f9; /* Color de fondo para las filas */
+}
+
+/* Estilo para las filas alternas */
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Fondo gris claro para las filas alternas */
+}
+
+/* Efecto cuando el mouse pasa por encima de una fila */
+tr:hover {
+  background-color: #ddd; /* Resalta la fila al pasar el mouse */
+}
+
+/* Estilo para el contenedor de la tabla */
+.container {
+  width: 90%; /* Limita el ancho de la tabla */
+  margin: 0 auto; /* Centra la tabla en la pantalla */
+}
+
+/* Agrega un poco de espacio alrededor del texto */
+h3 {
+  margin-top: 10px;
+  font-size: 1.5em;
+  color: #333;
+}

@@ -1,0 +1,23 @@
+<div *ngIf="resultado">
+  <h3>Resultado:</h3>
+  <table>
+    <tr>
+      <th>RUC</th>
+      <th>Razón Social</th>
+      <th>Fecha Inicio</th>
+      <th>Fecha Suspensión</th>
+      <th>Fecha Reinicio</th>
+      <th>Nivel de Riesgo</th>
+    </tr>
+    <tr>
+      <td>{{ resultado.ruc }}</td>
+      <td>{{ resultado.razon_social }}</td>
+      <td>{{ resultado.fechas[0]?.FECHA_INICIO_ACTIVIDADES }}</td>
+      <td>{{ resultado.fechas[0]?.FECHA_SUSPENSION_DEFINITIVA }}</td>
+      <td>{{ resultado.fechas[0]?.FECHA_REINICIO_ACTIVIDADES }}</td>
+      <td>{{ resultado.riesgo }}</td>
+    </tr>
+  </table>
+
+  <button (click)="nuevaConsulta()">Nueva Consulta</button>
+</div>

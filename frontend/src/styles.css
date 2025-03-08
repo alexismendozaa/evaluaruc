@@ -1,0 +1,52 @@
+/* Cabecera */
+header {
+  background-color: #1E3A8A;  /* Azul oscuro */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 15px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;  /* Tamaño del logo */
+  margin-right: 20px;
+}
+
+/* Título */
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* Pie de página */
+footer {
+  background-color: #1E3A8A;  /* Azul oscuro */
+  color: white;
+  padding: 50px 0;
+}
+
+.footer-container {
+  display: flow;
+  justify-content: space-around;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 3px;
+  text-align: end;
+}
+
+footer ul li {
+  font-size: 1rem;
+  margin: 20px 0;
+}
+
+footer ul li strong {
+  font-weight: bold;
+}

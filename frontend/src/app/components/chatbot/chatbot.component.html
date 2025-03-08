@@ -1,0 +1,23 @@
+<!-- Botón flotante para abrir el chatbot -->
+<button class="chatbot-button" (click)="toggleChatbot()">💬</button>
+
+<!-- Contenedor del chatbot -->
+<div class="chatbot-container" *ngIf="isOpen">
+    <div class="chatbot-header">
+        <span>Asistente Fiscal</span>
+        <button class="close-btn" (click)="toggleChatbot()">✖</button>
+    </div>
+
+    <div class="chatbot-messages">
+        <div *ngFor="let msg of messages" 
+             [ngClass]="{'user': msg.role === 'user', 'bot': msg.role === 'bot'}"
+             [innerHTML]="msg.text">
+        </div>
+    </div>
+
+    <div class="chatbot-input">
+        <input type="text" [(ngModel)]="userMessage" placeholder="Escribe tu consulta..." />
+        <button (click)="sendMessage()">➤</button>
+    </div>
+</div>
+

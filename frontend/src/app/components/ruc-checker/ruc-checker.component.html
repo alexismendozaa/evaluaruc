@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>Consulta de RUC</h2>
+
+  <!-- Contenedor del input y el botón -->
+  <div class="input-group">
+    <input type="text" [(ngModel)]="ruc" placeholder="Ingrese el RUC">
+    <button (click)="buscarRUC()">Buscar</button>
+  </div>
+
+  <p *ngIf="error" class="error">{{ error }}</p>
+</div>
+
+<div *ngIf="resultado">
+  <h3>Resultado:</h3>
+  <table *ngIf="resultado">
+    <thead>
+      <tr>
+        <th>RUC</th>
+        <th>Razón Social</th>
+        <th>Fecha Inicio</th>
+        <th>Fecha Suspensión</th>
+        <th>Fecha Reinicio</th>
+        <th>Nivel de Riesgo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ resultado.ruc }}</td>
+        <td>{{ resultado.razon_social }}</td>
+        <td>{{ formatDate(resultado.fechas[0]?.FECHA_INICIO_ACTIVIDADES) }}</td>
+        <td>{{ resultado.fechas[0]?.ESTADO_SUSPENSION }}</td>
+        <td>{{ resultado.fechas[0]?.ESTADO_REINICIO }}</td>
+        <td>{{ resultado.riesgo }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="nuevaConsulta()">Nueva Consulta</button>
+</div>

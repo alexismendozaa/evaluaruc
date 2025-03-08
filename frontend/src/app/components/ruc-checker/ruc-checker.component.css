@@ -1,0 +1,187 @@
+/* Estilos generales de la tabla */
+table {
+  width: 100%; /* Ancho completo de la tabla */
+  border-collapse: collapse; /* Hace que las celdas se junten sin espacio entre ellas */
+  margin-top: 20px; /* Añade un poco de espacio arriba de la tabla */
+  margin-bottom: 50px; /* Añade un margen en la parte inferior para crear espacio */
+  font-family: Arial, sans-serif; /* Fuente más legible */
+}
+
+th, td {
+  padding: 12px 15px; /* Espaciado dentro de las celdas */
+  text-align: left; /* Alinea el texto a la izquierda */
+  border: 1px solid #ddd; /* Bordes suaves y delgados */
+}
+
+th {
+  background-color: #1E3A8A; /* Azul oscuro */
+  color: white; /* Color del texto en el encabezado */
+  text-transform: uppercase; /* Hace que las letras sean mayúsculas */
+}
+
+td {
+  background-color: #f9f9f9; /* Color de fondo para las filas */
+}
+
+/* Estilo para las filas alternas */
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Fondo gris claro para las filas alternas */
+}
+
+/* Efecto cuando el mouse pasa por encima de una fila */
+tr:hover {
+  background-color: #ddd; /* Resalta la fila al pasar el mouse */
+}
+
+/* Contenedor de la tabla */
+.container {
+  width: 80%; /* Limita el ancho de la tabla */
+  margin: 0 auto; /* Centra la tabla en la pantalla */
+}
+
+/* Cabecera */
+header {
+  background-color: #1E3A8A;  /* Azul oscuro */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;  /* Tamaño del logo */
+  margin-right: 10px;
+}
+
+/* Título */
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Pie de página */
+footer {
+  background-color: #1E3A8A;  /* Azul oscuro */
+  color: white;
+  padding: 40px 0;  /* Añadir más espacio arriba y abajo del pie de página */
+  margin-top: 40px; /* Asegura que haya espacio entre la tabla y el pie de página */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+footer ul li {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+footer ul li strong {
+  font-weight: bold;
+}
+
+/* Estilo del footer para que no quede pegado al contenido */
+footer {
+  padding: 20px 0;
+  background-color: #1E3A8A;
+  color: white;
+  margin-top: 50px; /* Aumentar el espacio entre el contenido y el pie */
+}
+/* Contenedor general */
+.container {
+  width: 50%; /* Puedes ajustar este valor según lo que necesites */
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para el input y el botón en una fila */
+.input-group {
+  display: flex;
+  flex-direction: column; /* Coloca el input y el botón en columna */
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Estilo para el input */
+input[type="text"] {
+  padding: 10px 15px;
+  width: 80%; /* Ajusta el ancho del input */
+  margin-bottom: 10px; /* Espacio entre el input y el botón */
+  font-size: 1rem;
+  border: 1px solid #ccc; /* Borde gris */
+  border-radius: 5px; /* Bordes redondeados */
+  box-sizing: border-box;
+}
+
+/* Estilo para el botón */
+button {
+  background-color: #007bff; /* Azul */
+  color: white;
+  border: none;
+  padding: 12px 5px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 15%; /* El mismo ancho que el input */
+}
+
+/* Efecto hover para el botón */
+button:hover {
+  background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Estilo para el botón de "Nueva Consulta" */
+button.new-consulta {
+  background-color: #28a745; /* Verde */
+  margin-top: 30px; /* Espacio entre el botón y la tabla */
+}
+
+button.new-consulta:hover {
+  background-color: #218838; /* Verde más oscuro */
+}
+
+/* Estilo de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #1E3A8A;
+  color: white;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}

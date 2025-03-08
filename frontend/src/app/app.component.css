@@ -1,0 +1,39 @@
+/* Contenedor principal */
+/* Estilo para el título */
+h1 {
+  font-size: 3rem;
+  color: #1E3A8A;
+  margin-bottom: 50px;
+  display: block; /* Asegura que se comporte como un bloque */
+  text-align: center; /* Centra el texto */
+}
+
+.container {
+  width: 80%; /* Ajusta el ancho de la página */
+  margin: 0 auto; /* Centra el contenedor */
+  text-align: center; /* Centra el texto y la imagen */
+  padding: 20px;
+}
+
+/* Estilos para la imagen del logo */
+.logo-container {
+  margin: 20px 0; /* Espacio arriba y abajo de la imagen */
+}
+
+.logo {
+  width: 150px; /* Ajusta el tamaño del logo */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo para el título */
+h1 {
+  font-size: 3rem;
+  color: #1E3A8A;
+  margin-bottom: 50px;
+}
+
+/* Estilos para los componentes (si es necesario) */
+app-ruc-checker, app-table {
+  margin-top: 20px; /* Espacio entre los componentes */
+}
